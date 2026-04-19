@@ -1,40 +1,70 @@
 .section {
-  padding: 10rem 0;
+  padding: 12rem 0;
   background-color: transparent;
   position: relative;
+  overflow: hidden;
+}
+
+.accentsContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.6;
 }
 
 .header {
   text-align: center;
-  margin-bottom: 6rem;
+  margin-bottom: 8rem;
+  position: relative;
+  z-index: 1;
+}
+
+.overline {
+  font-family: var(--font-accent);
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--color-cloudy);
+  display: block;
+  margin-bottom: 1.5rem;
 }
 
 .title {
-  font-size: clamp(3rem, 7vw, 5rem);
+  font-size: clamp(3.5rem, 8vw, 6rem);
   font-weight: 400;
-  line-height: 1;
+  line-height: 0.9;
   color: var(--color-deep-blue);
+  letter-spacing: -0.04em;
 }
 
 .grid {
+  position: relative;
+  z-index: 1;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(10px);
   border: 1px solid rgba(0, 0, 0, 0.05);
-  background: white;
-  border-radius: 32px;
+  border-radius: 40px;
   overflow: hidden;
 }
 
 .cell {
-  padding: 4rem 3rem;
+  padding: 5rem 3.5rem;
   border: 0.5px solid rgba(0, 0, 0, 0.05);
   display: flex;
   flex-direction: column;
-  transition: background-color 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .cell:hover {
-  background-color: rgba(0, 0, 0, 0.01);
+  background-color: white;
+  box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.02);
 }
 
 .serviceCell {
@@ -43,41 +73,48 @@
 }
 
 .iconBox {
-  margin-bottom: 2rem;
-  width: 80px;
-  height: 80px;
+  margin-bottom: 2.5rem;
+  width: 100px;
+  height: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
+  background: rgba(0, 0, 0, 0.02);
+  border-radius: 24px;
 }
 
 .placeholderIcon {
-  font-size: 3rem;
+  font-size: 3.5rem;
 }
 
 .cellTitle {
-  font-size: 1.5rem;
-  font-weight: 500;
-  margin-bottom: 1rem;
+  font-family: var(--font-accent);
+  font-size: 1.1rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
   color: var(--color-deep-blue);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
 
 .cellText {
   color: var(--color-warm-brown);
-  font-size: 1.1rem;
-  line-height: 1.5;
-  margin-bottom: 2rem;
+  font-size: 1.15rem;
+  line-height: 1.6;
+  margin-bottom: 3rem;
 }
 
 .badge {
   margin-top: auto;
-  font-size: 0.75rem;
-  font-weight: 700;
-  padding: 0.5rem 1rem;
-  background: rgba(0, 0, 0, 0.05);
+  font-family: var(--font-accent);
+  font-size: 0.7rem;
+  font-weight: 800;
+  padding: 0.6rem 1.2rem;
+  background: var(--color-pampas);
   border-radius: 50px;
-  color: var(--color-warm-brown);
+  color: var(--color-crail);
   text-transform: uppercase;
+  letter-spacing: 0.1em;
 }
 
 .valueCell {
@@ -86,12 +123,12 @@
 
 .valHeader {
   display: flex;
-  gap: 1.5rem;
+  gap: 2rem;
   align-items: flex-start;
 }
 
 .valIcon {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   flex-shrink: 0;
 }
 
@@ -99,7 +136,7 @@
   flex: 1;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1024px) {
   .grid {
     grid-template-columns: 1fr;
   }

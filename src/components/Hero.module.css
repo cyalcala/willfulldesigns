@@ -7,6 +7,7 @@
   justify-content: center;
   padding: 2rem;
   overflow: hidden;
+  perspective: 1500px;
 }
 
 .canvasContainer {
@@ -22,37 +23,48 @@
   position: relative;
   z-index: 2;
   width: 100%;
-  max-width: 1200px;
-  height: 90vh;
-  border-radius: 40px;
+  max-width: 1300px;
+  height: 85vh;
+  border-radius: 48px;
   display: flex;
   flex-direction: column;
-  padding: 2rem 4rem;
-  overflow: hidden;
+  padding: 3rem 5rem;
+  transform-style: preserve-3d;
 }
 
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 
 .logo {
-  font-size: 1.5rem;
-  font-weight: 700;
+  font-family: var(--font-accent);
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: -0.05em;
   color: var(--color-deep-blue);
+  text-transform: uppercase;
+}
+
+.logoAccent {
+  color: var(--color-crail);
 }
 
 .nav {
   display: flex;
-  gap: 2.5rem;
+  gap: 3rem;
 }
 
 .nav a {
-  font-weight: 500;
+  font-family: var(--font-accent);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
   color: var(--color-deep-blue);
-  opacity: 0.7;
+  opacity: 0.6;
   transition: opacity 0.3s ease;
 }
 
@@ -61,15 +73,20 @@
 }
 
 .navBtn {
-  background-color: var(--color-crail);
+  background-color: var(--color-deep-blue);
   color: white;
-  padding: 0.75rem 1.5rem;
-  border-radius: 12px;
-  font-weight: 600;
-  transition: transform 0.3s ease;
+  padding: 0.9rem 1.8rem;
+  border-radius: 14px;
+  font-family: var(--font-accent);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: all 0.3s ease;
 }
 
 .navBtn:hover {
+  background-color: var(--color-crail);
   transform: translateY(-2px);
 }
 
@@ -77,74 +94,104 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  text-align: center;
-  max-width: 900px;
-  margin: 0 auto;
+  max-width: 850px;
 }
 
 .title {
-  font-size: clamp(2.5rem, 6vw, 4.5rem);
-  line-height: 1.1;
-  margin-bottom: 2rem;
+  font-size: clamp(3rem, 7vw, 5.5rem);
+  line-height: 1;
+  margin-bottom: 2.5rem;
   color: var(--color-deep-blue);
 }
 
 .accent {
+  font-style: italic;
+  font-weight: 400;
   color: var(--color-crail);
 }
 
 .subtitle {
   font-size: 1.25rem;
-  margin-bottom: 3rem;
+  line-height: 1.6;
   color: var(--color-warm-brown);
-  max-width: 600px;
+  max-width: 550px;
+  margin-bottom: 3.5rem;
 }
 
-.cta {
-  background-color: white;
+.ctaGroup {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.primaryCta {
+  background-color: var(--color-crail);
+  color: white;
+  padding: 1.25rem 2.5rem;
+  border-radius: 14px;
+  font-family: var(--font-accent);
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px rgba(193, 95, 60, 0.2);
+}
+
+.primaryCta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(193, 95, 60, 0.3);
+}
+
+.secondaryCta {
+  background-color: rgba(255, 255, 255, 0.5);
   color: var(--color-deep-blue);
   padding: 1.25rem 2.5rem;
-  border-radius: 12px;
-  font-weight: 600;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  border-radius: 14px;
+  font-family: var(--font-accent);
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: 1px solid rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease;
 }
 
-.cta:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+.secondaryCta:hover {
+  background-color: white;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  padding-top: 2rem;
+}
+
+.trustInfo {
+  font-family: var(--font-accent);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-cloudy);
 }
 
 .scrollHint {
-  margin-top: auto;
-  font-weight: 600;
+  font-family: var(--font-accent);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
   color: var(--color-warm-brown);
-  opacity: 0.6;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
 }
 
-.arrow {
-  background: rgba(0,0,0,0.05);
-  width: 32px;
-  height: 32px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-}
-
-@media (max-width: 992px) {
+@media (max-width: 1024px) {
   .glassPanel {
-    padding: 2rem;
+    padding: 2.5rem;
     height: auto;
-    min-height: 90vh;
+    min-height: 80vh;
   }
-  
-  .nav {
-    display: none;
-  }
+  .nav { display: none; }
+  .ctaGroup { flex-direction: column; }
 }
