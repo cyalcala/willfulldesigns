@@ -32,18 +32,25 @@ function GlassMaterial() {
 
 function Laptop() {
   return (
-    <group position={[1.5, -0.5, 0]} rotation={[0, -0.4, 0]}>
-      {/* Base */}
-      <RoundedBox args={[2.5, 0.1, 1.8]} radius={0.05} smoothness={4}>
+    <group position={[1.5, -0.8, 0]} rotation={[0, -0.5, 0]}>
+      {/* Base / Keyboard Area */}
+      <RoundedBox args={[2.6, 0.1, 1.8]} radius={0.04} smoothness={4}>
         <ClayMaterial color="#ffffff" />
       </RoundedBox>
-      {/* Screen */}
-      <group position={[0, 0.05, -0.9]} rotation={[-0.2, 0, 0]}>
-        <RoundedBox args={[2.5, 1.7, 0.05]} radius={0.05} smoothness={4} position={[0, 0.85, 0]}>
+      
+      {/* Trackpad (subtle recessed look) */}
+      <Box args={[0.8, 0.01, 0.5]} position={[0, 0.051, 0.5]}>
+        <meshStandardMaterial color="#f0f0f0" roughness={0.4} />
+      </Box>
+
+      {/* Screen / Lid */}
+      <group position={[0, 0.05, -0.9]} rotation={[Math.PI * -0.6, 0, 0]}>
+        {/* The screen itself */}
+        <RoundedBox args={[2.6, 1.7, 0.06]} radius={0.04} smoothness={4} position={[0, 0.85, 0]}>
           <ClayMaterial color="#ffffff" />
         </RoundedBox>
-        {/* Screen Content */}
-        <Box args={[2.3, 1.5, 0.01]} position={[0, 0.85, 0.03]}>
+        {/* Screen Display Area */}
+        <Box args={[2.4, 1.5, 0.01]} position={[0, 0.85, 0.035]}>
           <meshBasicMaterial color="#f4f3ee" />
         </Box>
       </group>
