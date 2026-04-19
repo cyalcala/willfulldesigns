@@ -42,25 +42,26 @@ function FloatingShelf() {
 
 function Laptop() {
   return (
-    <group position={[1.8, -1.05, 0.5]} rotation={[0.05, -0.7, 0]}>
-      {/* Base */}
-      <RoundedBox args={[2.8, 0.1, 2]} radius={0.04} smoothness={4}>
-        <ClayMaterial color="#ffffff" />
+    <group position={[2, -1.05, 0.5]} rotation={[0.05, -0.6, 0]}>
+      {/* Base - Smoother Beige Clay */}
+      <RoundedBox args={[2.8, 0.12, 2]} radius={0.1} smoothness={8}>
+        <ClayMaterial color="#f4f3ee" />
       </RoundedBox>
       
-      {/* Trackpad */}
-      <Box args={[0.8, 0.01, 0.5]} position={[0, 0.051, 0.5]}>
-        <meshStandardMaterial color="#eeeeee" roughness={0.4} />
-      </Box>
+      {/* Trackpad - subtle indentation */}
+      <RoundedBox args={[0.8, 0.02, 0.5]} position={[0, 0.06, 0.5]} radius={0.05} smoothness={4}>
+        <ClayMaterial color="#eeeeee" />
+      </RoundedBox>
 
-      {/* Screen / Lid */}
-      <group position={[0, 0.05, -1]} rotation={[-1.2, 0, 0]}>
-        <RoundedBox args={[2.8, 1.8, 0.06]} radius={0.04} smoothness={4} position={[0, 0.9, 0]}>
-          <ClayMaterial color="#ffffff" />
+      {/* Screen / Lid - Smoother Beige Clay */}
+      <group position={[0, 0.06, -1]} rotation={[-1.3, 0, 0]}>
+        <RoundedBox args={[2.8, 1.8, 0.08]} radius={0.1} smoothness={8} position={[0, 0.9, 0]}>
+          <ClayMaterial color="#f4f3ee" />
         </RoundedBox>
-        <Box args={[2.6, 1.6, 0.01]} position={[0, 0.9, 0.035]}>
-          <meshBasicMaterial color="#f4f3ee" />
-        </Box>
+        {/* The Display */}
+        <RoundedBox args={[2.5, 1.6, 0.01]} position={[0, 0.9, 0.045]} radius={0.05} smoothness={4}>
+          <meshBasicMaterial color="#ffffff" />
+        </RoundedBox>
       </group>
     </group>
   );
