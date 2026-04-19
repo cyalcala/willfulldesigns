@@ -42,7 +42,7 @@ function FloatingShelf() {
 
 function Laptop() {
   return (
-    <group position={[1.8, -1.1, 0.5]} rotation={[0.1, -0.7, 0]}>
+    <group position={[1.8, -1.05, 0.5]} rotation={[0.05, -0.7, 0]}>
       {/* Base */}
       <RoundedBox args={[2.8, 0.1, 2]} radius={0.04} smoothness={4}>
         <ClayMaterial color="#ffffff" />
@@ -54,7 +54,7 @@ function Laptop() {
       </Box>
 
       {/* Screen / Lid */}
-      <group position={[0, 0.05, -1]} rotation={[-1.7, 0, 0]}>
+      <group position={[0, 0.05, -1]} rotation={[-1.2, 0, 0]}>
         <RoundedBox args={[2.8, 1.8, 0.06]} radius={0.04} smoothness={4} position={[0, 0.9, 0]}>
           <ClayMaterial color="#ffffff" />
         </RoundedBox>
