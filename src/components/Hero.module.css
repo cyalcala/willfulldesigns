@@ -1,0 +1,87 @@
+.heroSection {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 10%;
+  background: var(--color-background);
+  overflow: hidden;
+}
+
+.canvasContainer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60%;
+  height: 100%;
+  z-index: 1;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+}
+
+.title {
+  font-size: clamp(3rem, 8vw, 6rem);
+  line-height: 1;
+  margin-bottom: 2rem;
+  color: var(--color-deep-blue);
+}
+
+.highlight {
+  color: var(--color-crail);
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  margin-bottom: 3rem;
+  color: var(--color-warm-brown);
+  max-width: 500px;
+}
+
+.ctaButton {
+  padding: 1.25rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background-color: var(--color-deep-blue);
+  color: white;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px rgba(26, 43, 76, 0.2);
+}
+
+.ctaButton:hover {
+  transform: translateY(-5px);
+  background-color: var(--color-crail);
+  box-shadow: 0 15px 40px rgba(193, 95, 60, 0.3);
+}
+
+@media (max-width: 768px) {
+  .heroSection {
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .canvasContainer {
+    position: relative;
+    width: 100%;
+    height: 40vh;
+  }
+
+  .content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .subtitle {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
