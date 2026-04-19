@@ -1,26 +1,19 @@
 .footer {
-  padding: 10rem 10% 4rem;
-  background-color: var(--color-background-alt);
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
+  padding: 5rem 0 4rem;
+  background-color: transparent;
 }
 
 .ctaCard {
-  background-color: var(--color-deep-blue);
-  color: white;
   padding: 6rem 4rem;
   border-radius: 48px;
   text-align: center;
   margin-bottom: 8rem;
-  box-shadow: 0 40px 100px rgba(26, 43, 76, 0.2);
 }
 
 .title {
   font-size: clamp(2.5rem, 6vw, 4.5rem);
   margin-bottom: 1.5rem;
+  color: var(--color-deep-blue);
 }
 
 .highlight {
@@ -29,7 +22,7 @@
 
 .subtitle {
   font-size: 1.25rem;
-  color: var(--color-cloudy);
+  color: var(--color-warm-brown);
   margin-bottom: 4rem;
   max-width: 600px;
   margin-left: auto;
@@ -51,11 +44,11 @@
 }
 
 .input, .textarea {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(0, 0, 0, 0.05);
   padding: 1.5rem;
   border-radius: 16px;
-  color: white;
+  color: var(--color-deep-blue);
   font-size: 1rem;
   transition: all 0.3s ease;
 }
@@ -63,7 +56,7 @@
 .input:focus, .textarea:focus {
   outline: none;
   border-color: var(--color-crail);
-  background: rgba(255, 255, 255, 0.1);
+  background: white;
 }
 
 .textarea {
@@ -73,9 +66,9 @@
 
 .submitBtn {
   padding: 1.5rem 3rem;
-  background-color: var(--color-crail);
+  background-color: var(--color-deep-blue);
   color: white;
-  border-radius: 50px;
+  border-radius: 12px;
   font-size: 1.1rem;
   font-weight: 700;
   transition: all 0.3s ease;
@@ -85,14 +78,14 @@
 
 .submitBtn:hover {
   transform: translateY(-5px);
-  box-shadow: 0 15px 40px rgba(193, 95, 60, 0.4);
+  background-color: var(--color-crail);
 }
 
 .bottomBar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-top: 1px solid rgba(177, 173, 161, 0.2);
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
   padding-top: 3rem;
   color: var(--color-warm-brown);
 }

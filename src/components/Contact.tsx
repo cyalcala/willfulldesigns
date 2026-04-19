@@ -4,9 +4,9 @@ import styles from "./Contact.module.css";
 
 export default function Contact() {
   return (
-    <footer className={styles.footer}>
-      <div className={styles.container}>
-        <div className={styles.ctaCard}>
+    <footer className={styles.footer} id="contact">
+      <div className="section-wrapper">
+        <div className={`${styles.ctaCard} glass`}>
           <h2 className={styles.title}>Ready to <span className={styles.highlight}>Start?</span></h2>
           <p className={styles.subtitle}>
             Let&apos;s build something meaningful together. We make the process as smooth as the final product.
@@ -29,7 +29,7 @@ export default function Contact() {
             <a href="#">LinkedIn</a>
             <a href="#">Dribbble</a>
           </div>
-          <p className={styles.copy}>&copy; {new Date().getFullYear()} Willful Designs. All rights reserved.</p>
+          <p className={styles.copy}>&copy; {new Date().getFullYear()} Willful Designs.</p>
         </div>
       </div>
     </footer>

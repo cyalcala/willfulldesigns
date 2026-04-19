@@ -24,7 +24,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} ${outfit.variable}`}>
-      <body>{children}</body>
+      <body>
+        <div className="bg-container">
+          <div className="blob"></div>
+          <div className="blob-2"></div>
+          <div className="blob-3"></div>
+        </div>
+        {children}
+      </body>
     </html>
   );
 }

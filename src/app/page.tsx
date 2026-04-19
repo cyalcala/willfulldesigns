@@ -1,14 +1,12 @@
 import Hero from "@/components/Hero";
-import Values from "@/components/Values";
-import Services from "@/components/Services";
+import ServicesV2 from "@/components/ServicesV2";
 import Contact from "@/components/Contact";
 
 export default function Home() {
   return (
     <main>
       <Hero />
-      <Values />
-      <Services />
+      <ServicesV2 />
       <Contact />
     </main>
   );
